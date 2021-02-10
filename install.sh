@@ -1,4 +1,7 @@
 #!/bin/bash
+cd "$(dirname "${BASH_SOURCE[0]}")" &&
+    mkdir -p bin &&
+    cd bin || exit 1
 
 caddyVersion=2.1.1
 

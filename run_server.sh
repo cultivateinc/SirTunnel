@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./caddy run --config caddy_config.json
+./bin/caddy run --config caddy_config.json
