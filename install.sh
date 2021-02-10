@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 caddyVersion=2.1.1
 
