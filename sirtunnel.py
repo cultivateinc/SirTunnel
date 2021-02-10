@@ -10,6 +10,8 @@ if __name__ == '__main__':
 
     host = sys.argv[1]
     port = sys.argv[2]
+    path = sys.argv[3] if len(sys.argv) > 3 else None
+
     tunnel_id = host + '-' + port
 
     caddy_add_route_request = {
@@ -24,6 +26,9 @@ if __name__ == '__main__':
             }]
         }]
     }
+
+    if path != None:
+        caddy_add_route_request["match"][0]["path"] = [path]
 
     body = json.dumps(caddy_add_route_request).encode('utf-8')
     headers = {
